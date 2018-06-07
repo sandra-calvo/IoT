@@ -19,7 +19,7 @@ In this guide, we will:
 
 1. In a browser navigate to https://bluemix.net
 2.	Select 'LOG IN' then enter your log in information and press 'SIGN IN'.  You should be seeing your dashboard view:
- -------------->![](/screenshots/Picture1.png?raw=true)
+![](/screenshots/Picture1.png?raw=true)
 3.	Select the 'CATALOG' view.
 4.	Locate the Internet of Things Platform Starter in the boilerplate section of the catalog and click on it. 
 ![](/screenshots/Picture2.png?raw=true)
@@ -58,7 +58,44 @@ The IoT starter has already some nodes in the Node-Red canvas to simulate an IoT
 
 Note: If you get an "Authorization denied" message when deploying your applications make your sure you are logged in. Click on the icon on the top right side of the Node-RED canvas and login with the credentials you created in the previous steps. 
 
-## Step 2. Add new nodes to your application and configure your app
+## Step 2. Register a device in the IoT Platform
+
+First we are going to create and register a device in the IoT platform, then we will modify the existing flow to send the simulated data to the IoT service. 
+
+Go to the IBM Cloud page where you had the overview of your application (If you closed the IBM Cloud tab, open a new tab go to www.bluemix.net and click on the app you created in the previous step to get to the overview site).
+
+In the connections section you will see the services connected to the application. In this example we have a Cloudant database and the IoT service. Click on the IoT service.
+
+![](/screenshots/Picture9.png?raw=true)
+
+Next click on the Launch button to open the IoT Platform service in a new tab.
+
+Click on the 'Devices' type to register a new device. 
+![](/screenshots/Picture10.png?raw=true)
+
+Next click on the 'Add device' button on the top right corner of the screen.
+Write a Device type and Device Id. For example, type = sensor, id=MySensor01.Then click Next. 
+![](/screenshots/Picture11.png?raw=true)
+
+There is no need to add more information about the device at this point, so click next. 
+![](/screenshots/Picture12.png?raw=true)
+You can group sensors, but we will not use them in this lab so click next also in the Group tab. 
+![](/screenshots/Picture13.png?raw=true)
+
+The device will have an authorization token, you can write your own token or generate a random token. Write your personalized token for your device. Then click 'Next'.
+![](/screenshots/Picture14.png?raw=true)
+
+You will see a summary of your registration, click 'Done'.
+![](/screenshots/Picture15.png?raw=true)
+
+**Important**
+Once your device is registered you will see the credentials, including the authentication token. Copy these credentials and save them in a note, because authentication tokens are non-recoverable. If you misplace this token, you will need to re-register the device to generate a new authentication token.
+![](/screenshots/Picture16.png?raw=true)
+
+
+## Step 3. Configure your app and add new nodes to the palette
+
+**Back to Node-RED window**
 We are going to add new nodes to the Node-RED palette directly from the Node-RED window. For this lab we need the following nodes:
 
       - node-red-dashboard
@@ -75,7 +112,7 @@ This will prompt a window to confirm the installation. Click on install and wait
 After few seconds you will see the new nodes in your Node-RED palette. 
 
  
-## Step 3. Build the Node-RED flow
+## Step 4. Build the Node-RED flow
 In this section we will build a simple flow to represent our user interface and connect it with our conversation. Access your application Node-RED workspace by clickin on your application URL.
 
 The flow we are going to build will look like this:
