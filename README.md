@@ -62,44 +62,68 @@ Note: If you get an "Authorization denied" message when deploying your applicati
 
 First we are going to create and register a device in the IoT platform, then we will modify the existing flow to send the simulated data to the IoT service. 
 
-Go to the IBM Cloud page where you had the overview of your application (If you closed the IBM Cloud tab, open a new tab go to www.bluemix.net and click on the app you created in the previous step to get to the overview site).
+1. Go to the IBM Cloud page where you had the overview of your application (If you closed the IBM Cloud tab, open a new tab go to www.bluemix.net and click on the app you created in the previous step to get to the overview site).
 
-In the connections section you will see the services connected to the application. In this example we have a Cloudant database and the IoT service. Click on the IoT service.
-
+2. Click on the IoT service. You will find it in the connections section, along with a Cloudant database. 
 ![](/screenshots/Picture9.png?raw=true)
 
-Next click on the Launch button to open the IoT Platform service in a new tab.
+3. Click on the Launch button to open the IoT Platform service in a new tab.
 
-Click on the 'Devices' type to register a new device. 
+4. One you are in the IoT Platform service, click on the 'Devices' type to register a new device. 
 ![](/screenshots/Picture10.png?raw=true)
 
-Next click on the 'Add device' button on the top right corner of the screen.
-Write a Device type and Device Id. For example, type = sensor, id=MySensor01.Then click Next. 
-![](/screenshots/Picture11.png?raw=true)
+5. Next click on the 'Add device' button on the top right corner of the screen.
+Write a Device type and Device Id. **Device Type: thermostat - Device ID: LivingRoomThermo1**. Then click Next. 
+![](/screenshots/Picture11.png?raw=true
 
-There is no need to add more information about the device at this point, so click next. 
+6. There is no need to add more information about the device at this point, so click next. 
 ![](/screenshots/Picture12.png?raw=true)
 You can group sensors, but we will not use them in this lab so click next also in the Group tab. 
 ![](/screenshots/Picture13.png?raw=true)
 
-The device will have an authorization token, you can write your own token or generate a random token. Write your personalized token for your device. Then click 'Next'.
+7. The device will have an authorization token, you can write your own token or generate a random token. Write your personalized token for your device. Then click 'Next'.
 ![](/screenshots/Picture14.png?raw=true)
 
 You will see a summary of your registration, click 'Done'.
 ![](/screenshots/Picture15.png?raw=true)
 
 **Important**
-Once your device is registered you will see the credentials, including the authentication token. Copy these credentials and save them in a note, because authentication tokens are non-recoverable. If you misplace this token, you will need to re-register the device to generate a new authentication token.
+
+Once your device is registered you will see the credentials, including the authentication token. **Copy** these credentials and **save** them in a note, because authentication tokens are non-recoverable. If you misplace this token, you will need to re-register the device to generate a new authentication token.
 ![](/screenshots/Picture16.png?raw=true)
 
 
-## Step 3. Configure your app and add new nodes to the palette
+## Step 3. Configure your Node-RED flow and add new nodes to the palette
 
 **Back to Node-RED window**
+Leave the IoT Platform web open, we will return to see how the data flows through the IoT Platform.
+
+1. Double click in the light blue 'Send Data' node to edit how often the data is generated. 
+Configure as shown in the images. The sensor will send data to the cloud every minute. Then click 'Done'.
+![](/screenshots/Picture17.png?raw=true)
+
+2. Click on Deploy to save the changes.
+![](/screenshots/Picture20.png?raw=true)
+
+3. Start the data flow by clicking in the left side tab of the Send Data node. 
+![](/screenshots/Picture18.png?raw=true)
+
+4. If you go back to the IoT Platform web you will see the incoming data. 
+![](/screenshots/Picture19.png?raw=true)
+
+5. If you want to save the sensor data to a database just drag and drop the Cloudant node from the palette and connect it with the function node. Double click on the Cloudant node and give your database a name. Then click on Done. 
+![](/screenshots/Picture21.png?raw=true)
+
+This should be your flow:
+![](/screenshots/Picture22.png?raw=true)
+
+Remember to click on 'Deploy' to save the changes.
+
+
 We are going to add new nodes to the Node-RED palette directly from the Node-RED window. For this lab we need the following nodes:
 
       - node-red-dashboard
-      - node-red-64
+      - node-red-node-base64
 
 In the Node-RED window click on the three lines on the top right corner and in the menu, click on the "Manage palette". This will open the node menu where you can add new nodes to your application. You will see the nodes that are installed by default and if you go to the 'install' tab you can search for any node package and add it directly to your app.
  -------------->![](/screenshots/PictureX.png?raw=true)
