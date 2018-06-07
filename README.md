@@ -22,41 +22,43 @@ In this guide, we will:
  -------------->![](/screenshots/Picture1.png?raw=true)
 3.	Select the 'CATALOG' view.
 4.	Locate the Internet of Things Platform Starter in the boilerplate section of the catalog and click on it. 
-  -------------->![](/screenshots/Picture2.png?raw=true)
+![](/screenshots/Picture2.png?raw=true)
 
 5.	Enter a name for your application, as shown below (host will automatically be completed). The host name must be unique on IBM Cloud, so please choose a name with your company name or initials to try to make a unique name.  Press 'CREATE'. 
- -------------->![](/screenshots/Picture3.png?raw=true)
+![](/screenshots/Picture3.png?raw=true)
  
 6.	Your application is now staging and will be up and running in a short while. Click 'OVERVIEW' to see information about your application.
- -------------->![](/screenshots/PictureX.png?raw=true)
+![](/screenshots/PictureX.png?raw=true)
 
 7.	When fully staged, click on the View app link, next to the green or half green circle, this launches the Node-RED main page. 
+![](/screenshots/Picture3b.png?raw=true)
 
        Node-RED is a visual tool for wiring the internet of things - connecting hardware devices, APIs and online services in a  new and interesting way. Node-RED provides a browser-based flow editor that makes it easy to wire together flows using the wide range nodes in the palette. Flows can be then deployed to the runtime in a single-click.
-       
-  -------------->![](/screenshots/Picture4.png?raw=true)
+
+![](/screenshots/Picture4.png?raw=true)
   
 8.	Configure your Node-RED editor. In this section, you will set up a username and password to protect your flow. 
-  -------------->![](/screenshots/Picture5.png?raw=true)
+![](/screenshots/Picture5.png?raw=true)
 
 9.	Write an username and a password of your choice and click 'Next'. Remember that it does not have to be related to your IBM Cloud ID. 
-  -------------->![](/screenshots/Picture6.png?raw=true)
+![](/screenshots/Picture6.png?raw=true)
  
-Node-RED is an open source project so you can add new nodes to the palette by modifying the package.json file. We will do this later on in the lab. Click 'Next'.
-  -------------->![](/screenshots/Picture7.png?raw=true)
+Node-RED is an open source project so you can add new nodes to the palette. We will do this later on in the lab. Click 'Next'.
  
 #### Your Node-RED flow is all set! Enter your credentials to access the editor.
-*Your Node-RED flow is all set!
-  -------------->![](/screenshots/Picture8.png?raw=true)
+
+![](/screenshots/Picture8.png?raw=true)
  
 Now click Go to your Node-RED flow editor to open the flow editor.
- -------------->![](/screenshots/Picture9.png?raw=true)
 
 10.	When using Node-RED we build our apps using this graphical editor interface to wire together the blocks we need. We can simply drag and drop the blocks from the left menu into the workspace in the center of the screen and connect them to create a new flow. 
 
+The IoT starter has already some nodes in the Node-Red canvas to simulate an IoT device and send data to the IBM Cloud IoT Platform.
+![](/screenshots/Picture7.png?raw=true)
+
 Note: If you get an "Authorization denied" message when deploying your applications make your sure you are logged in. Click on the icon on the top right side of the Node-RED canvas and login with the credentials you created in the previous steps. 
 
-## Step 2. Add new nodes to your application
+## Step 2. Add new nodes to your application and configure your app
 We are going to add new nodes to the Node-RED palette directly from the Node-RED window. For this lab we need the following nodes:
 
       - node-red-dashboard
