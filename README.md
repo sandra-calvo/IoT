@@ -153,17 +153,21 @@ In this section we will build a simple flow to represent the user interface. Acc
 
 Copy the content of the **send-data2ui-flow.json** file.
 Import the flow by simply clickcing on the 3 white lines on the top right corner of the Node-RED window.  Import - Clipboard.
+
 <img src="/screenshots/Picture27.png" width="50%" height="50%">
 
 Paste the text you copied from the file. 
+
 <img src="/screenshots/Picture28.png" width="50%" height="50%">
 
 The flow will create a new flow window named 'Receive'. This flow reads sensor data from the IoT platform service and sends it to the user interface. 
+
 <img src="/screenshots/Picture29.png" width="50%" height="50%">
  
 You will need to do some editing on few nodes. 
 
 It also possible to change the looks of your user interface in the dashboard tab. 
+
 <img src="/screenshots/Picture30.png" width="50%" height="50%">
 
 Deploy your application changes from the Deploy button on the top right side of the screeen. 
