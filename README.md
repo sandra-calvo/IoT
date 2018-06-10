@@ -1,14 +1,10 @@
 # IBM Cloud :cloud: & IoT
 
-<!--- GIF & images
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
---->
- 
 ## Introduction 
-In this guide, we will:
+In this guide, you will:
   - Connect a virtual IoT sensor to IBM Cloud IoT Platform
   - Visualize IoT data in a dashboard
-  - Create a virtual assistant connected to our sensor with IBM Watsona
+  - Create a virtual assistant connected to your virtual sensor with IBM Watson
 
 #### Prerequisites
 - Register on IBM Cloud at https://bluemix.net
@@ -18,22 +14,23 @@ In this guide, we will:
 ## Step 1. Create IoT Platform application
 
 1. In a browser navigate to https://bluemix.net
-2.	Select 'LOG IN' then enter your log in information and press 'SIGN IN'.  You should be seeing your dashboard view:
-![](/screenshots/Picture1.png?raw=true)
+2.	Select 'LOG IN' then enter your log in information and press 'SIGN IN'.  You should see your dashboard. 
 3.	Select the 'CATALOG' view.
+![](/screenshots/Picture1.png?raw=true)
 4.	Locate the Internet of Things Platform Starter in the boilerplate section of the catalog and click on it. 
 ![](/screenshots/Picture2.png?raw=true)
 
 5.	Enter a name for your application, as shown below (host will automatically be completed). The host name must be unique on IBM Cloud, so please choose a name with your company name or initials to try to make a unique name.  Press 'CREATE'. 
 ![](/screenshots/Picture3.png?raw=true)
  
-6.	Your application is now staging and will be up and running in a short while. Click 'OVERVIEW' to see information about your application.
+6.	Your application is now staging and will be up and running in a short while. Click 'OVERVIEW' to see information about your application. 
+*Note: If you are using Lite accounts your application will be in an awake mode. That means that if after 10 days your application has not been used IBM will stop it. *
 ![](/screenshots/PictureX.png?raw=true)
 
 7.	When fully staged, click on the View app link, next to the green or half green circle, this launches the Node-RED main page. 
 ![](/screenshots/Picture3b.png?raw=true)
 
-       Node-RED is a visual tool for wiring the internet of things - connecting hardware devices, APIs and online services in a  new and interesting way. Node-RED provides a browser-based flow editor that makes it easy to wire together flows using the wide range nodes in the palette. Flows can be then deployed to the runtime in a single-click.
+       Node-RED is a visual tool for wiring the internet of things - connecting hardware devices, APIs and online services in a new and interesting way. Node-RED provides a browser-based flow editor that makes it easy to wire together flows using the wide range nodes in the palette. Flows can be then deployed to the runtime in a single-click.
 
 ![](/screenshots/Picture4.png?raw=true)
   
@@ -73,8 +70,11 @@ First we are going to create and register a device in the IoT platform, then we 
 ![](/screenshots/Picture10.png?raw=true)
 
 5. Next click on the 'Add device' button on the top right corner of the screen.
-Write a Device type and Device Id. **Device Type: thermostat - Device ID: LivingRoomThermo1**. Then click Next. 
-![](/screenshots/Picture11.png?raw=true
+Write a Device type and Device Id. 
+**Device Type: thermostat
+Device ID: LivingRoomThermo1**. 
+Then click Next. 
+![](/screenshots/Picture11.png?raw=true)
 
 6. There is no need to add more information about the device at this point, so click next. 
 ![](/screenshots/Picture12.png?raw=true)
@@ -87,9 +87,8 @@ You can group sensors, but we will not use them in this lab so click next also i
 You will see a summary of your registration, click 'Done'.
 ![](/screenshots/Picture15.png?raw=true)
 
-**Important**
-
-Once your device is registered you will see the credentials, including the authentication token. **Copy** these credentials and **save** them in a note, because authentication tokens are non-recoverable. If you misplace this token, you will need to re-register the device to generate a new authentication token.
+**Important** COPY CREDENTIALS - YOU WILL NEED THEM LATER
+Once your device is registered you will see the credentials, including the authentication token. **Copy these credentials and save them** in a note, because authentication tokens are non-recoverable. If you misplace this token, you will need to re-register the device to generate a new authentication token.
 ![](/screenshots/Picture16.png?raw=true)
 
 
@@ -114,10 +113,10 @@ Configure as shown in the images. The sensor will send data to the cloud every m
 5. If you want to save the sensor data to a database just drag and drop the Cloudant node from the palette and connect it with the function node. Double click on the Cloudant node and give your database a name. Then click on Done. 
 ![](/screenshots/Picture21.png?raw=true)
 
-This should be your flow:
+This should be your device flow:
 ![](/screenshots/Picture22.png?raw=true)
 
-Remember to click on 'Deploy' to save the changes.
+Remember to click on **'Deploy'** to save the changes.
 
 
 We are going to add new nodes to the Node-RED palette directly from the Node-RED window. For this lab we need the following nodes:
@@ -125,15 +124,21 @@ We are going to add new nodes to the Node-RED palette directly from the Node-RED
       - node-red-dashboard
       - node-red-node-base64
 
-In the Node-RED window click on the three lines on the top right corner and in the menu, click on the "Manage palette". This will open the node menu where you can add new nodes to your application. You will see the nodes that are installed by default and if you go to the 'install' tab you can search for any node package and add it directly to your app.
- -------------->![](/screenshots/PictureX.png?raw=true)
-                   
+In the Node-RED window click on the three lines on the top right corner and in the menu, click on the "Manage palette". This will open the node menu where you can add new nodes to your application. 
+![](/screenshots/Picture23.png?raw=true)
+
+You will see the nodes that are installed by default and if you go to the 'install' tab you can search for any node package and add it directly to your app.
+![](/screenshots/Picture24.png?raw=true)
+             
 Search for the dashboard nodes by writing 'dashboard'. This will return multiple node packages, you need to install the package 'node-red-dashboard'. Find it in the search results and click on install. 
- -------------->![](/screenshots/PictureX.png?raw=true)
+![](/screenshots/Pictur25.png?raw=true)
  
 This will prompt a window to confirm the installation. Click on install and wait few minutes, the application may require a restart. Click "Done" to close the left side menu. 
+![](/screenshots/Picture26.png?raw=true)
 
 After few seconds you will see the new nodes in your Node-RED palette. 
+
+Repeat the process for the other node package needed: node-red-node-base64
 
  
 ## Step 4. Build the Node-RED flow
