@@ -90,7 +90,9 @@ You will see a summary of your registration, click 'Done'.
 **Important** COPY CREDENTIALS - YOU WILL NEED THEM LATER
 Once your device is registered you will see the credentials, including the authentication token. **Copy these credentials and save them** in a note, because authentication tokens are non-recoverable. If you misplace this token, you will need to re-register the device to generate a new authentication token.
 
-<img src="/screenshots/Picture16.png" width="50%" height="50%">
+<img src="/screenshots/Picture16.png" width="70%" height="70%">
+
+# PART 2: Visualize IoT data
 
 ## Step 3. Configure your Node-RED flow and add new nodes to the palette
 
@@ -143,33 +145,30 @@ This will prompt a window to confirm the installation. Click on install and wait
 
 After few seconds you will see the new nodes in your Node-RED palette. 
 
-Repeat the process for the other node package needed: node-red-node-base64
+**Repeat** the process for the other node package: node-red-node-base64
 
  
-## Step 4. Build the Node-RED flow
-In this section we will build a simple flow to represent our user interface and connect it with our conversation. Access your application Node-RED workspace by clickin on your application URL.
+## Step 4. Build a web interface
+In this section we will build a simple flow to represent the user interface. Access your application Node-RED workspace by clickin on your application URL. 
 
-The flow we are going to build will look like this:
- 
-Copy the content of the bot-with-ui.txt file.
+Copy the content of the **send-data2ui-flow.json** file.
+Import the flow by simply clickcing on the 3 white lines on the top right corner of the Node-RED window.  Import - Clipboard.
+<img src="/screenshots/Picture27.png" width="50%" height="50%">
 
-Import the flow by simply clickcing on the 3 white lines on the top right corner of the Node-RED window.  Import - Clipboard - and paste the text you copied from above. 
- 
- 
-This will create an exact flow as shown in the first picture of this section. You will need to do some editing on few nodes. 
+Paste the text you copied from the file. 
+<img src="/screenshots/Picture28.png" width="50%" height="50%">
 
-Edit the conversation node with your own credentials. You can find the credentials in the IBM Cloud dashboard where you launched the convesation service (show in step 1.1). You will also need the workspace ID. This can be found inside the Watson Coversation service. 
+The flow will create a new flow window named 'Receive'. This flow reads sensor data from the IoT platform service and sends it to the user interface. 
+<img src="/screenshots/Picture29.png" width="50%" height="50%">
  
+You will need to do some editing on few nodes. 
+
+It also possible to change the looks of your user interface in the dashboard tab. 
+<img src="/screenshots/Picture30.png" width="50%" height="50%">
+
 Deploy your application changes from the Deploy button on the top right side of the screeen. 
 
-## Step 4.
-## Step 5. 
-## Step 6.
-
-
-
-
-## Step 7. Check your webapp! 
+## Step 5. Check your webapp UI! 
 The dashboard nodes added an UI to our Node-RED application. To access the UI go to:
 
 http://yourAppName.mybluemix.net/ui - US South
@@ -181,19 +180,15 @@ http://yourAppName.eu-de.mybluemix.net/ui - Germany
 
 http://yourAppName.au-syd.mybluemix.net/ui - Sydney
 
-Awesome, you web app is ready! :+1:
+Awesome, you web app is ready! Now you can see IoT data flow in real time. :+1:
 
-Play with the visual recognition classifier using the UI.
-Enter the image URL and choose default classifier or custom and check the results!
+# Part 3: Connect Watson Assistant with IBM Cloud IoT Platform
 
- ![](/screenshots/Picture31.png?raw=true)
-
-# Part 2: Connect Watson Assistant with IBM Cloud IoT Platform
-
-## Step 1.
-## Step 2.
-## Step 3. 
-## Step 4.
+## Step 6.
+Edit the conversation node with your own credentials. You can find the credentials in the IBM Cloud dashboard where you launched the convesation service (show in step 1.1). You will also need the workspace ID. This can be found inside the Watson Coversation service. 
+## Step 7.
+## Step 8. 
+## Step 9.
 
 ``` javascript
 msg.payload="Watson says that is a/an: \n ";
