@@ -18,7 +18,7 @@ In this guide, you will:
 3.	Select the 'CATALOG' view.
 ![](/screenshots/Picture1.png?raw=true)
 4.	Locate the Internet of Things Platform Starter in the boilerplate section of the catalog and click on it. 
-![](/screenshots/Picture2.png?raw=true)
+<img src="/screenshots/Picture2.png" width="50%" height="50%">
 
 5.	Enter a name for your application, as shown below (host will automatically be completed). The host name must be unique on IBM Cloud, so please choose a name with your company name or initials to try to make a unique name.  Press 'CREATE'. 
 ![](/screenshots/Picture3.png?raw=true)
