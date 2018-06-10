@@ -113,6 +113,10 @@ Configure as shown in the images. The sensor will send data to the cloud every m
 4. If you go back to the IoT Platform web you will see the incoming data. 
 ![](/screenshots/Picture19.png?raw=true)
 
+**Note:** If you don't see any data flowing go to the IoT Platform  - Settings - and activate 'Last event cache'.
+
+<img src="/screenshots/Picture0.png" width="50%" height="50%">
+
 5. If you want to save the sensor data to a database just drag and drop the Cloudant node from the palette and connect it with the function node. Double click on the Cloudant node and give your database a name. Then click on Done. 
 
 <img src="/screenshots/Picture21.png" width="50%" height="50%">
@@ -188,11 +192,68 @@ Awesome, you web app is ready! Now you can see IoT data flow in real time. :+1:
 
 # PART 3: Connect Watson Assistant with IBM Cloud IoT Platform
 
-## Step 6.
+## Step 6. Create Watson Assistant service on IBM Cloud
+With IBM Watson™ Assistant service you can build a solution that understands natural-language input and uses machine learning to respond to customers in a way that simulates a conversation between humans.
+
+Go to your IBM Cloud account and open the catalog. Look for Watson Assistant service and click on it.
+
+<img src="/screenshots/Picture31.png" width="50%" height="50%">
+
+Choose the region and space where you want the service to be created. Your organization will be filled by default.
+You don't need to change the name if you don't want to, just click on 'Create'. 
+![](/screenshots/Picture32.png?raw=true)
+
+Once the service is created click on 'Launch tool' to access it. 
+![](/screenshots/Picture33.png?raw=true)
+ 
+Click on Log in with IBM ID and you will automatically access the service. It uses your IBM Cloud ID and password.
+
+<img src="/screenshots/Picture34.png" width="50%" height="50%">
+
+In the home tab you have videos and tutorials on how to get started building dialoges. Let's move to the Workspaces tab.
+<img src="/screenshots/Picture35.png" width="50%" height="50%">
+ 
+## Step 7. Import a workspace
+The natural-language processing happens inside a workspace, which is a container for all of the artifacts that define the conversation flow for an application.
+
+You can create a workspace and start from scratch or import an existing conversation. 
+Let's start by importing a conversation. Download the **IoTConversation.json** file located in this repository. 
+
+Click on the import icon shown in the image below. 
+<img src="/screenshots/Picture36.png" width="50%" height="50%">
+
+When you import a workspace, you can choose to import only the intents and entities, which can be useful if you want to build a new dialog using the same training data. In this case we will import everything.
+<img src="/screenshots/Picture37.png" width="50%" height="50%">
+
+
+# Step 8. Test your dialog
+As you make changes to your dialog, you can test it at any time to see how it responds to input.
+1.	From the Dialog tab, click the conversation buble icon.
+2.	In the chat panel, type some text and then press Enter.
+3.	Check the response to see if the dialog correctly interpreted your input and chose the right response. 
+
+The chat window indicates what intents and entities were recognized in the input. In the dialog editor pane, the currently active node is highlighted
+Feel free to create new intents for your bot.
+
+<img src="/screenshots/Picture38.png" width="50%" height="50%">
+
+# Step 9. Get your credentials 
+In this example, we will need your Watson conversation credentials and your workspace ID. Save these credentials, because we will need them later in Step 3. 
+
+1.	Get your workspace ID
+In your Watson Conversations service workspace dashboard click on the three dots to view the details of your workspace and then copy your workspace ID.  
+Note: The ID showed in this document does not work, use your own. 
+
+2.	Watson Assistant credentials 
+In IBM Cloud open your Assistant service and click on 'Service credentials'.
+ 
+Click on 'View credentials' to get your password and username. If you don't see any credentials click on 'New credential'. 
+
+
 Edit the conversation node with your own credentials. You can find the credentials in the IBM Cloud dashboard where you launched the convesation service (show in step 1.1). You will also need the workspace ID. This can be found inside the Watson Coversation service. 
-## Step 7.
-## Step 8. 
-## Step 9.
+## Step 10. Build a Node-RED flow to connect with Watson Assistant
+## Step 11. 
+## Step 12.
 
 ``` javascript
 msg.payload="Watson says that is a/an: \n ";
@@ -201,5 +262,3 @@ msg.payload="Watson says that is a/an: \n ";
     }
     return msg;
 ```
-
-You can get the complete Node-RED flow from the **mimmitkoodaa_visualRecognition_flow.txt**.
