@@ -133,7 +133,7 @@ We are going to add new nodes to the Node-RED palette directly from the Node-RED
 
 In the Node-RED window click on the three lines on the top right corner and in the menu, click on the "Manage palette". This will open the node menu where you can add new nodes to your application. 
 
-<img src="/screenshots/Picture23.png" width="50%" height="50%">
+<img src="/screenshots/Picture23.png" width="30%" height="30%">
 
 You will see the nodes that are installed by default and if you go to the 'install' tab you can search for any node package and add it directly to your app.
 
@@ -211,6 +211,7 @@ Click on Log in with IBM ID and you will automatically access the service. It us
 <img src="/screenshots/Picture34.png" width="50%" height="50%">
 
 In the home tab you have videos and tutorials on how to get started building dialoges. Let's move to the Workspaces tab.
+
 <img src="/screenshots/Picture35.png" width="50%" height="50%">
  
 ## Step 7. Import a workspace
@@ -220,11 +221,12 @@ You can create a workspace and start from scratch or import an existing conversa
 Let's start by importing a conversation. Download the **IoTConversation.json** file located in this repository. 
 
 Click on the import icon shown in the image below. 
+
 <img src="/screenshots/Picture36.png" width="50%" height="50%">
 
 When you import a workspace, you can choose to import only the intents and entities, which can be useful if you want to build a new dialog using the same training data. In this case we will import everything.
-<img src="/screenshots/Picture37.png" width="50%" height="50%">
 
+<img src="/screenshots/Picture37.png" width="50%" height="50%">
 
 # Step 8. Test your dialog
 As you make changes to your dialog, you can test it at any time to see how it responds to input.
@@ -238,27 +240,23 @@ Feel free to create new intents for your bot.
 <img src="/screenshots/Picture38.png" width="50%" height="50%">
 
 # Step 9. Get your credentials 
-In this example, we will need your Watson conversation credentials and your workspace ID. Save these credentials, because we will need them later in Step 3. 
+In this example, we will need your Watson Assistant credentials and your workspace ID.
+Go to the deploy tab in the Assistant window. There you will find your workspace ID, username and password. Copy the credentials and save them for later.
 
-1.	Get your workspace ID
-In your Watson Conversations service workspace dashboard click on the three dots to view the details of your workspace and then copy your workspace ID.  
-Note: The ID showed in this document does not work, use your own. 
+<img src="/screenshots/Picture39.png" width="50%" height="50%">
 
-2.	Watson Assistant credentials 
-In IBM Cloud open your Assistant service and click on 'Service credentials'.
- 
-Click on 'View credentials' to get your password and username. If you don't see any credentials click on 'New credential'. 
-
-
-Edit the conversation node with your own credentials. You can find the credentials in the IBM Cloud dashboard where you launched the convesation service (show in step 1.1). You will also need the workspace ID. This can be found inside the Watson Coversation service. 
 ## Step 10. Build a Node-RED flow to connect with Watson Assistant
-## Step 11. 
-## Step 12.
+**Back to Node-RED window**
 
-``` javascript
-msg.payload="Watson says that is a/an: \n ";
-    for (var i=0; i < msg.result.images[0].classifiers[0].classes.length; i++) {
-    msg.payload += msg.result.images[0].classifiers[0].classes[i].class + " with a score of " + msg.result.images[0].classifiers[0].classes[i].score + "\n";
-    }
-    return msg;
-```
+Copy the content of **bot-ui-flow.json** and import the flow to Node-RED, same way you did in Step 4.
+Once you do this your flow should look like this:
+![](/screenshots/Picture40.png?raw=true)
+
+Edit the conversation node with your own credentials saved in the previous step. 
+<img src="/screenshots/Picture41.png" width="50%" height="50%">
+
+## Step 11. Check the final result! 
+Go back to the UI and talk with your bot! 
+You can ask for sensor information and it will show in the gauge the last measurement. 
+![](/screenshots/Picture42.png?raw=true)
+
