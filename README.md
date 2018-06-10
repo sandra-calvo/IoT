@@ -165,8 +165,7 @@ Paste the text you copied from the file.
 <img src="/screenshots/Picture28.png" width="50%" height="50%">
 
 The flow will create a new flow window named 'Receive'. This flow reads sensor data from the IoT platform service and sends it to the user interface. 
-
-<img src="/screenshots/Picture29.png" width="50%" height="50%">
+![](/screenshots/Picture29.png?raw=true)
  
 You will need to do some editing on few nodes. 
 
