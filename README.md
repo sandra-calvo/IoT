@@ -236,14 +236,14 @@ As you make changes to your dialog, you can test it at any time to see how it re
 
 The chat window indicates what intents and entities were recognized in the input. In the dialog editor pane, the currently active node is highlighted
 Feel free to create new intents for your bot.
+![](/screenshots/Picture38.png?raw=true)
 
-<img src="/screenshots/Picture38.png" width="50%" height="50%">
 
 # Step 9. Get your credentials 
 In this example, we will need your Watson Assistant credentials and your workspace ID.
 Go to the deploy tab in the Assistant window. There you will find your workspace ID, username and password. Copy the credentials and save them for later.
+![](/screenshots/Picture39.png?raw=true)
 
-<img src="/screenshots/Picture39.png" width="50%" height="50%">
 
 ## Step 10. Build a Node-RED flow to connect with Watson Assistant
 **Back to Node-RED window**
