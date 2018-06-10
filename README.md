@@ -32,13 +32,13 @@ In this guide, you will:
 
        Node-RED is a visual tool for wiring the internet of things - connecting hardware devices, APIs and online services in a new and interesting way. Node-RED provides a browser-based flow editor that makes it easy to wire together flows using the wide range nodes in the palette. Flows can be then deployed to the runtime in a single-click.
 
-![](/screenshots/Picture4.png?raw=true)
+<img src="/screenshots/Picture4.png" width="50%" height="50%">
   
 8.	Configure your Node-RED editor. In this section, you will set up a username and password to protect your flow. 
-![](/screenshots/Picture5.png?raw=true)
+<img src="/screenshots/Picture5.png" width="50%" height="50%">
 
 9.	Write an username and a password of your choice and click 'Next'. Remember that it does not have to be related to your IBM Cloud ID. 
-![](/screenshots/Picture6.png?raw=true)
+<img src="/screenshots/Picture6.png" width="50%" height="50%">
  
 Node-RED is an open source project so you can add new nodes to the palette. We will do this later on in the lab. Click 'Next'.
  
@@ -89,8 +89,7 @@ You will see a summary of your registration, click 'Done'.
 
 **Important** COPY CREDENTIALS - YOU WILL NEED THEM LATER
 Once your device is registered you will see the credentials, including the authentication token. **Copy these credentials and save them** in a note, because authentication tokens are non-recoverable. If you misplace this token, you will need to re-register the device to generate a new authentication token.
-![](/screenshots/Picture16.png?raw=true)
-
+<img src="/screenshots/Picture16.png" width="50%" height="50%">
 
 ## Step 3. Configure your Node-RED flow and add new nodes to the palette
 
@@ -99,7 +98,7 @@ Leave the IoT Platform web open, we will return to see how the data flows throug
 
 1. Double click in the light blue 'Send Data' node to edit how often the data is generated. 
 Configure as shown in the images. The sensor will send data to the cloud every minute. Then click 'Done'.
-![](/screenshots/Picture17.png?raw=true)
+<img src="/screenshots/Picture17.png" width="50%" height="50%">
 
 2. Click on Deploy to save the changes.
 ![](/screenshots/Picture20.png?raw=true)
@@ -111,13 +110,12 @@ Configure as shown in the images. The sensor will send data to the cloud every m
 ![](/screenshots/Picture19.png?raw=true)
 
 5. If you want to save the sensor data to a database just drag and drop the Cloudant node from the palette and connect it with the function node. Double click on the Cloudant node and give your database a name. Then click on Done. 
-![](/screenshots/Picture21.png?raw=true)
+<img src="/screenshots/Picture21.png" width="50%" height="50%">
 
 This should be your device flow:
 ![](/screenshots/Picture22.png?raw=true)
 
 Remember to click on **'Deploy'** to save the changes.
-
 
 We are going to add new nodes to the Node-RED palette directly from the Node-RED window. For this lab we need the following nodes:
 
@@ -125,13 +123,13 @@ We are going to add new nodes to the Node-RED palette directly from the Node-RED
       - node-red-node-base64
 
 In the Node-RED window click on the three lines on the top right corner and in the menu, click on the "Manage palette". This will open the node menu where you can add new nodes to your application. 
-![](/screenshots/Picture23.png?raw=true)
+<img src="/screenshots/Picture23.png" width="50%" height="50%">
 
 You will see the nodes that are installed by default and if you go to the 'install' tab you can search for any node package and add it directly to your app.
-![](/screenshots/Picture24.png?raw=true)
+<img src="/screenshots/Picture24.png" width="50%" height="50%">
              
 Search for the dashboard nodes by writing 'dashboard'. This will return multiple node packages, you need to install the package 'node-red-dashboard'. Find it in the search results and click on install. 
-![](/screenshots/Pictur25.png?raw=true)
+<img src="/screenshots/Picture25.png" width="50%" height="50%">
  
 This will prompt a window to confirm the installation. Click on install and wait few minutes, the application may require a restart. Click "Done" to close the left side menu. 
 ![](/screenshots/Picture26.png?raw=true)
