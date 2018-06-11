@@ -6,7 +6,7 @@ In this guide, you will:
   - PART 2: Visualize IoT data
   - PART 3: Connect Watson Assistant with IBM Cloud IoT Platform
   
-  Download json file from: https://ibm.box.com/v/iotconversation 
+  For the conversation part download json file from: https://ibm.box.com/v/iotconversation 
 
 #### Prerequisites
 - Register on IBM Cloud at https://bluemix.net
