@@ -258,21 +258,23 @@ Edit also the Http request node called Get IoT data. You will need an API Key an
 **Back to IoT Platform**
 
 In the IoT Platform go to the "Apps" tab.
-<img src="/screenshots/Picture43.png" width="50%" height="50%">
+
+<img src="/screenshots/Picture43.png" width="20%" height="20%">
 
 We will need a new API Key for the bot connection. Click on Generate a new API Key.
-[](/screenshots/Picture44.png?raw=true)
+<img src="/screenshots/Picture44.png" width="80%" height="80%">
 
 Give your API Key a description for example: "Connect to Watson Assistant" and click next. 
-[](/screenshots/Picture45.png?raw=true)
+<img src="/screenshots/Picture45.png" width="80%" height="80%">
 
 Select the role for your API key. In this case we can select: Visualization application. Then click on generate API key. 
-[](/screenshots/Picture46.png?raw=true)
+<img src="/screenshots/Picture46.png" width="80%" height="80%">
 
 Your API key is ready! Copy the API key and the authentication token in a separate note or document because you will not be able to recover the authentication token. If you lose the authentication token you will need to create a new API key. 
-[](/screenshots/Picture47.png?raw=true)
+<img src="/screenshots/Picture47.png" width="80%" height="80%">
 
 In the folowing step you will also need your organization ID. That is easy to see in the top right corner of the IoT platform webpage. Copy this too. 
+
 <img src="/screenshots/Picture48.png" width="50%" height="50%">
 
 **Back to Node-RED window**
