@@ -268,6 +268,7 @@ Give your API Key a description for example: "Connect to Watson Assistant" and c
 <img src="/screenshots/Picture45.png" width="80%" height="80%">
 
 Select the role for your API key. In this case we can select: Visualization application. Then click on generate API key. 
+
 <img src="/screenshots/Picture46.png" width="80%" height="80%">
 
 Your API key is ready! Copy the API key and the authentication token in a separate note or document because you will not be able to recover the authentication token. If you lose the authentication token you will need to create a new API key. 
