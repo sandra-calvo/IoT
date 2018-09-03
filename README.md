@@ -272,6 +272,7 @@ Select the role for your API key. In this case we can select: Visualization appl
 <img src="/screenshots/Picture46.png" width="80%" height="80%">
 
 Your API key is ready! Copy the API key and the authentication token in a separate note or document because you will not be able to recover the authentication token. If you lose the authentication token you will need to create a new API key. 
+
 <img src="/screenshots/Picture47.png" width="80%" height="80%">
 
 In the folowing step you will also need your organization ID. That is easy to see in the top right corner of the IoT platform webpage. Copy this too. 
