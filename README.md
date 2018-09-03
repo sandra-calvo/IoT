@@ -257,6 +257,7 @@ Edit the conversation node with your own credentials saved in the previous step.
 Edit also the Http request node called Get IoT data. You will need an API Key and Authentication token from the IoT platform to access to the API using the basic authentication.
 
 **Back to IoT Platform**
+
 In the IoT Platform go to the "Apps" tab.
 [](/screenshots/Picture43.png?raw=true)
 
@@ -276,6 +277,7 @@ In the folowing step you will also need your organization ID. That is easy to se
 <img src="/screenshots/Picture48.png" width="50%" height="50%">
 
 **Back to Node-RED window**
+
 Double clik on the Get IoT data node and select basic authentication. Use the API key from the previous step as the username and the authentication token as the password. 
 
 The url to get the data is the following:
