@@ -254,6 +254,37 @@ Once you do this your flow should look like this:
 Edit the conversation node with your own credentials saved in the previous step. 
 <img src="/screenshots/Picture41.png" width="50%" height="50%">
 
+Edit also the Http request node called Get IoT data. You will need an API Key and Authentication token from the IoT platform to access to the API using the basic authentication.
+
+**Back to IoT Platform**
+In the IoT Platform go to the "Apps" tab.
+[](/screenshots/Picture43.png?raw=true)
+
+We will need a new API Key for the bot connection. Click on Generate a new API Key.
+[](/screenshots/Picture44.png?raw=true)
+
+Give your API Key a description for example: "Connect to Watson Assistant" and click next. 
+[](/screenshots/Picture45.png?raw=true)
+
+Select the role for your API key. In this case we can select: Visualization application. Then click on generate API key. 
+[](/screenshots/Picture46.png?raw=true)
+
+Your API key is ready! Copy the API key and the authentication token in a separate note or document because you will not be able to recover the authentication token. If you lose the authentication token you will need to create a new API key. 
+[](/screenshots/Picture47.png?raw=true)
+
+In the folowing step you will also need your organization ID. That is easy to see in the top right corner of the IoT platform webpage. Copy this too. 
+<img src="/screenshots/Picture48.png" width="50%" height="50%">
+
+**Back to Node-RED window**
+Double clik on the Get IoT data node and select basic authentication. Use the API key from the previous step as the username and the authentication token as the password. 
+
+The url to get the data is the following:
+https://YOUR-ORGANIZATION-ID.internetofthings.ibmcloud.com/api/v00a02/device/types/thermostat/devices/LivingRoomThermo1/events/update
+
+**Note:** If you changed the device type or device Id you will need to change the URL too. In this case Device Type is thermostat and Device ID is LivingRoomThermo1.
+Click on Deploy to save the changes. 
+
+
 ## Step 11. Check the final result! 
 Go back to the UI and talk with your bot! 
 You can ask for sensor information and it will show in the gauge the last measurement. 
