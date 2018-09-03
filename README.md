@@ -249,10 +249,9 @@ Go to the deploy tab in the Assistant window. There you will find your workspace
 
 Copy the content of **bot-ui-flow.json** and import the flow to Node-RED, same way you did in Step 4.
 Once you do this your flow should look like this:
-![](/screenshots/Picture40.png?raw=true)
+![](/screenshots/Picture41.png?raw=true)
 
 Edit the conversation node with your own credentials saved in the previous step. 
-<img src="/screenshots/Picture41.png" width="50%" height="50%">
 
 Edit also the Http request node called Get IoT data. You will need an API Key and Authentication token from the IoT platform to access to the API using the basic authentication.
 
