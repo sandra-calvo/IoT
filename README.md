@@ -2,14 +2,14 @@
 
 ## Introduction 
 In this guide, you will:
-  - [PART 1](#part-1): Connect a virtual IoT sensor to IBM Cloud IoT Platform
-  - [PART 2](#part-2): Visualize IoT data
-  - [PART 3](#part-3): Connect Watson Assistant with your sensor
+  - [PHASE 1](#phase-1): Connect a virtual IoT sensor to IBM Cloud IoT Platform
+  - [PHASE 2](#phase-2): Visualize IoT data
+  - [PHASE 3](#phase-3): Connect Watson Assistant with your sensor
 
 #### Prerequisites
 - Register on IBM Cloud at https://bluemix.net
 
-# PART 1
+# PHASE 1
 # Connect a virtual IoT sensor to IBM Cloud IoT Platform
 
 ## Step 1. Create IoT Platform application
@@ -93,7 +93,7 @@ Once your device is registered you will see the credentials, including the authe
 
 <img src="/screenshots/Picture16.png" width="70%" height="70%">
 
-# PART 2
+# PHASE 2
 # Visualize IoT data
 
 ## Step 3. Configure your Node-RED flow and add new nodes to the palette
@@ -191,7 +191,7 @@ http://yourAppName.au-syd.mybluemix.net/ui - Sydney
 
 Awesome, you web app is ready! Now you can see IoT data flow in real time. :+1:
 
-# PART 3
+# PHASE 3
 # Connect Watson Assistant with IBM Cloud IoT Platform
 
 ## Step 6. Create Watson Assistant service on IBM Cloud
