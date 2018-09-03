@@ -258,7 +258,7 @@ Edit also the Http request node called Get IoT data. You will need an API Key an
 **Back to IoT Platform**
 
 In the IoT Platform go to the "Apps" tab.
-[](/screenshots/Picture43.png?raw=true)
+<img src="/screenshots/Picture43.png" width="50%" height="50%">
 
 We will need a new API Key for the bot connection. Click on Generate a new API Key.
 [](/screenshots/Picture44.png?raw=true)
