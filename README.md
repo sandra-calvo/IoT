@@ -2,14 +2,15 @@
 
 ## Introduction 
 In this guide, you will:
-  - PART 1: Connect a virtual IoT sensor to IBM Cloud IoT Platform
-  - PART 2: Visualize IoT data
-  - PART 3: Connect Watson Assistant with IBM Cloud IoT Platform
+  - [PART 1]: Connect a virtual IoT sensor to IBM Cloud IoT Platform]
+  - [PART 2]: Visualize IoT data]
+  - [PART 3]: Connect Watson Assistant with IBM Cloud IoT Platform]
 
 #### Prerequisites
 - Register on IBM Cloud at https://bluemix.net
 
-# PART 1: Connect a virtual IoT sensor to IBM Cloud IoT Platform
+# PART 1
+# Connect a virtual IoT sensor to IBM Cloud IoT Platform
 
 ## Step 1. Create IoT Platform application
 
@@ -277,7 +278,7 @@ Your API key is ready! Copy the API key and the authentication token in a separa
 
 In the folowing step you will also need your organization ID. That is easy to see in the top right corner of the IoT platform webpage. Copy this too. 
 
-<img src="/screenshots/Picture48.png" width="50%" height="50%">
+<img src="/screenshots/Picture48.png" width="20%" height="20%">
 
 **Back to Node-RED window**
 
